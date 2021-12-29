@@ -1,0 +1,11 @@
+
+<%mi_vehicles_list.each do |s| %>
+  <tr>
+
+    <td> <%=s.client.full_name%> </td>
+    <td> <%=s.model_vehicle.brand.description %> </td>
+    <td> <%=s.model_vehicle.description %> </td>
+    <td> <%=s.colour.description %> </td>
+    <td><%=link_to "Editar",obtener_vehicle_path(s.id) %></td>
+  </tr>
+<% end %>

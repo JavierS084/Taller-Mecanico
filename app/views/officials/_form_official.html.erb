@@ -1,0 +1,33 @@
+<div class="span4">
+<%= form_for mi_official do |f| %>
+  <p>
+
+    <%= f.label :Nombre %>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :Apellido %>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :Telefono %>
+    <%= f.text_field :phone %>
+
+  </p>
+  <p>
+    <%= f.label :Cedula %>
+    <%= f.text_field :document_number %>
+
+  </p>
+
+  <p>
+    <%= f.label :Cargo %>
+    <%= f.collection_select(:position_id,cargos,:id,:description, prompt: true) %>
+
+  </p>
+  <p>
+    <%=f.submit :class =>'btn btn-primary'%>
+  </p>
+
+<% end %>
+</div>

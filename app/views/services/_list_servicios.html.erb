@@ -1,0 +1,11 @@
+
+<% mi_list_servicios.each do |s| %>
+  <tr>
+
+    <td> <%=s.service_type.description %> </td>
+    <td> <%=s.description %> </td>
+    <td> <%=s.price%> </td>
+    <td> <%=link_to"editar",obtener_servicio_path(s.id) %></td>
+  </tr>
+
+<% end %>

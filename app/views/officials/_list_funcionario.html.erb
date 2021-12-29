@@ -1,0 +1,12 @@
+<%mi_list_funcionario.each do|s| %>
+  <tr>
+
+    <td> <%=s.first_name %></td>
+    <td> <%=s.last_name %></td>
+    <td> <%=s.phone %></td>
+    <td> <%=s.document_number%></td>
+    <td> <%=s.position.description %></td>
+    <td><%=link_to"Editar", obtener_official_path(s.id) %></td>
+
+  </tr>
+<% end %>

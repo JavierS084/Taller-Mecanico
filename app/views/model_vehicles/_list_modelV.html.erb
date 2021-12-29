@@ -1,0 +1,8 @@
+<% mi_list_modelo.each do|s| %>
+<tr>
+  <td> <%=s.brand.description%></td>
+  <td> <%=s.description %></td>
+  <td><%=link_to"Editar",obtener_modelo_path(s.id)%></td>
+
+</tr>
+<% end %>

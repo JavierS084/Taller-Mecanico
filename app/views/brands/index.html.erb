@@ -1,0 +1,37 @@
+
+<div>
+  <%= link_to "New brand", brand_formulario_path %>
+</div>
+
+<div class="span3">
+<div id="search_brand">
+ <%= form_tag(brand_list_path, method:  "get") do %>
+  <%=text_field_tag :search, params[:search] %>
+    <%=submit_tag "buscar", :class=>'btn btn-primary' %>
+    <% end %>
+</div>
+
+  <h3> Lista de Marcas</h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Accion</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% if @brand_list.empty? %>
+    <tr>
+      <td colspan="4"> No se encontraron marcas</td>
+    </tr>
+      <% else %>
+
+      <%=render "list_brand", mi_list_brand: @brand_list %>
+
+      <% end %>
+
+    </tbody>
+  </table>
+
+</div>

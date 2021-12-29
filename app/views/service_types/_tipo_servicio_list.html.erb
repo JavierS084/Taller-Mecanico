@@ -1,0 +1,9 @@
+<%mi_tipo_s.each do|s| %>
+  <tr>
+
+    <td> <%=s.description %></td>
+    <td><%=link_to "editar",obtener_tipo_servicio_path(s.id)  %></td>
+
+
+  </tr>
+<% end %>

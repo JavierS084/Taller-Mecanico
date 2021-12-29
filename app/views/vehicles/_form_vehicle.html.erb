@@ -1,0 +1,23 @@
+
+<div class="span4">
+  <%= form_for mi_vehicle do |f| %>
+    <p>
+      <%= f.label :Cliente %>
+      <%= f.collection_select(:client_id ,clientes,:id,:full_name, prompt: true)%>
+    </p>
+
+
+    <p>
+      <%= f.label :Modelo  %>
+      <%= f.collection_select(:model_vehicle_id,modelos,:id,:description,prompt:true)%>
+    </p>
+    <p>
+      <%= f.label :Color %>
+      <%= f.collection_select(:colour_id,colores,:id,:description,prompt:true)%>
+
+    </p>
+    <p>
+      <%=f.submit :class =>'btn btn-primary'%>
+    </p>
+  <% end %>
+</div>

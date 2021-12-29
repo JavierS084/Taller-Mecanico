@@ -1,0 +1,39 @@
+
+
+
+<div>
+  <%= link_to "New cargo", position_formulario_path%>
+  <br>
+</div>
+
+
+  <div class="span3">
+    <div id="search_position">
+      <%=form_tag(position_list_path, method: "get") do%>
+      <%=text_field_tag :search , params[:search] %>
+      <%=submit_tag "Buscar", :class=>'btn btn-primary' %>
+        <%end %>
+    </div>
+  <h3>Lista de cargos</h3>
+  <table class="table table-bordered">
+    <thead>
+
+    <tr>
+
+      <th>Cargo</th>
+      <th>Accion</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% if @position_list.empty? %>
+    <tr>
+      <td colspan="4"> No se encontraron cargos</td>
+      <% else %>
+      <%=render "cargos_list", mi_cargo_list: @position_list %>
+    </tr>
+      <%end %>
+    </tbody>
+
+  </table>
+</div>

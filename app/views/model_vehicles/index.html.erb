@@ -1,0 +1,37 @@
+
+<div>
+  <%= link_to "New Model", model_vehicle_formulario_path%>
+  <br>
+</div>
+
+<div class="span4">
+  <div id="search_model_vehicle">
+    <%=form_tag(model_list_path, method: "get") do %>
+    <%=text_field_tag :search, params[:search] %>
+    <%=submit_tag "Buscar", :class=>'btn btn-primary' %>
+    <% end %>
+  </div>
+
+  <h3>Lista de modelos</h3>
+
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Accion</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% if@model_list.empty? %>
+      <tr>
+        <td colspan="4">No se encontro modelos</td>
+      </tr>
+      <%else %>
+      <%=render "list_modelV", mi_list_modelo: @model_list %>
+    <%end %>
+    </tbody>
+
+  </table>
+</div>

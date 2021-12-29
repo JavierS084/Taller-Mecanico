@@ -1,0 +1,24 @@
+<div class="span4">
+<%= form_for mi_service do |f| %>
+  <p>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :Tipo_servicio %>
+    <%= f.collection_select(:service_type_id, tipo_servicios, :id,:description, prompt: true) %>
+  </p>
+
+  <p>
+    <%= f.label :Precio %>
+    <%= f.text_field :price %>
+
+  </p>
+  <p>
+    <%=f.submit :class =>'btn btn-primary'%>
+  </p>
+
+<% end %>
+</div>

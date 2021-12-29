@@ -1,0 +1,27 @@
+<div class="span4">
+  <%= form_for mi_client do |f| %>
+    <p>
+
+      <%= f.label :Nombre %>
+      <%= f.text_field :first_name %>
+    </p>
+    <p>
+      <%= f.label :Apellido %>
+      <%= f.text_field :last_name %>
+    </p>
+    <p>
+      <%= f.label :CI %>
+      <%= f.text_field :document %>
+
+    </p>
+    <p>
+      <%= f.label :Telefono %>
+      <%= f.text_field :phone %>
+
+    </p>
+    <p>
+      <%=f.submit :class =>'btn btn-primary'%>
+    </p>
+
+  <% end %>
+</div>

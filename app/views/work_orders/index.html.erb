@@ -1,0 +1,21 @@
+
+<div >
+  <%=link_to "New Work order", work_order_formulario_path %>
+</div>
+
+<h3>Lista de ordenes de trabajo</h3>
+<div class="span4">
+
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Orden de trabajo</th>
+  </tr>
+  <%@order_list.each do|s| %>
+    <tr>
+      <td> <%=s.id %></td>
+
+    </tr>
+  <% end %>
+</table>
+</div>

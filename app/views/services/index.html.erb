@@ -1,0 +1,41 @@
+<div>
+<%=link_to "Nuevo Servicio", service_formulario_path %>
+  <br>
+</div>
+
+<div class="span7">
+  <div id="search_service">
+  <%= form_tag(service_list_path, method:"get") do %>
+    <%=text_field_tag :search, params[:search] %>
+    <%=submit_tag "Buscar", :class =>'btn btn-primary'%>
+    <% end %>
+    </div>
+
+
+  <h3>Formulario de Servicios</h3>
+  <table class="table table-bordered">
+<thead>
+    <tr>
+
+      <th>Tipo de Servicio</th>
+      <th>Descripcion</th>
+      <th>Precio</th>
+      <th>Accion</th>
+    </tr>
+</thead>
+
+    <tbody>
+    <% if @service_list.empty? %>
+    <tr>
+      <td colspan="4"> No se encontaron servicios</td>
+    </tr>
+      <% else %>
+      <%= render "list_servicios", mi_list_servicios: @service_list %>
+    <%end %>
+
+
+    </tbody>
+      </table>
+
+
+</div>

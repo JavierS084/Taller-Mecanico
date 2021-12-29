@@ -1,0 +1,7 @@
+<% mi_list_brand.each do|s| %>
+  <tr>
+
+    <td> <%=s.description %></td>
+    <td><%=link_to"Editar", obtener_brand_path(s.id) %></td>
+  </tr>
+<% end %>

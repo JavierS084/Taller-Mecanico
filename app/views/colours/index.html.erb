@@ -1,0 +1,38 @@
+<div>
+  <%= link_to "New Colour", colour_formulario_path %><br>
+</div>
+<div class="span3">
+<div id="search_colour">
+  <%= form_tag(colour_list_path , method: "get") do %>
+  <%=text_field_tag :search  ,params[:search]%>
+  <%=submit_tag"Buscar", :class=>'btn btn-primary' %>
+    <%end %>
+</div>
+
+
+  <h3>Lista de Colores</h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+
+      <th>Color</th>
+      <th>Accion</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+
+    </tbody>
+    <% if @colour_list.empty? %>
+      <tr>
+        <td colspan="4"> No se encontraron colores</td>
+      </tr>
+    <% else %>
+
+      <%=render "list_color", mi_list_colour: @colour_list %>
+
+    <% end %>
+  </table>
+
+</div>

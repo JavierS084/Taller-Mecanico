@@ -1,0 +1,8 @@
+<% mi_list_colour.each do|s| %>
+  <tr>
+
+    <td> <%=s.description %></td>
+    <td><%=link_to "Editar", obtener_colour_path(s.id) %></td>
+
+  </tr>
+<% end %>

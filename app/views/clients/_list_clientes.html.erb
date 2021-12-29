@@ -1,0 +1,11 @@
+<% mi_list_client.each do|s| %>
+<tr>
+
+  <td> <%=s.first_name %></td>
+  <td> <%=s.last_name %></td>
+  <td><%=s.document %></td>
+  <td> <%=s.phone %></td>
+  <td><%=link_to"editar",obtener_client_path(s.id)%></td>
+
+</tr>
+<% end %>

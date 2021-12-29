@@ -1,0 +1,15 @@
+
+<div class="span4">
+  <%= form_for mi_model do |f|%>
+  <p>
+    <%=f.label :Modelo %>
+    <%= f.text_field :description %>
+  </p>
+  <%=f.label :Marca %>
+  <%= f.collection_select(:brand_id,marcas,:id, :description,prompt: true) %>
+  <p>
+    <%=f.submit :class =>'btn btn-primary'%>
+  </p>
+
+<% end %>
+</div>
