@@ -38,6 +38,12 @@ class ClientsController < ApplicationController
     @client=Client.find(params[:id])
   end
 
+  def destroy
+    @client = Client.find(params[:id])
+    @client.destroy!
+    redirect_to client_list_path
+  end
+
   private
   def client_parameter
     params.require(:client).permit( :first_name, :last_name,:document, :phone)

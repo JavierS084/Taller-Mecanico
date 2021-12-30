@@ -38,27 +38,37 @@ Rails.application.routes.draw do
   get"/obtener_tipo_servicio/:id", to:'service_types#edit', as: :obtener_tipo_servicio
   patch"/service_type/:id", to:'service_types#update', as: :service_type_update
   get "/service_type/:id", to:'service_types#show', as: :service_type
+  
   get"/obtener_servicio/:id", to:'services#edit', as: :obtener_servicio
   patch"/service/:id", to:"services#update", as: :services_update
   get"/service/:id", to:'services#show', as: :service
+
   get"/obtener_brand/:id",to:'brands#edit', as: :obtener_brand
   patch"/brand/:id", to:'brands#update', as: :brand_update
   get"/brand/:id", to:'brands#show', as: :brand
+
   get"/obtener_cliente/:id", to:'clients#edit' , as: :obtener_client
   patch"/client/:id",to:'clients#update',as: :client_update
   get"/client/:id",to:'clients#show', as: :client
+  delete "/client/:id", to:"clients#destroy", as: :clientDestroy
+
+
   get"/obtener_colour/:id", to:'colours#edit' , as: :obtener_colour
   patch"/colour/:id",to:'colours#update',as: :colour_update
   get"/colour/:id",to:'colours#show', as: :colour
+
   get"/obtener_modelo/:id", to:'model_vehicles#edit', as: :obtener_modelo
   patch"/model_vehicle/:id",to:'model_vehicles#update', as: :model_update
   get"/model_vehicle/:id", to:'model_vehicles#show', as: :model_vehicle
+
   get"/obtener_official/:id",to:'officials#edit', as: :obtener_official
   patch"/official/:id",to:'officials#update', as: :official_update
   get"/official/:id", to:'officials#show', as: :official
+
   get"/obtener_vehicle/:id",to:'vehicles#edit',as: :obtener_vehicle
   patch"/vehicle/:id",to:'vehicles#update', as: :vehicle_update
   get"/vehicle/:id", to:'vehicles#show', as: :vehicle
+
   get"/obtener_position/:id",to:'positions#edit', as: :obtener_position
   patch"/position/:id",to:'positions#update', as: :position_update
   get"/position/:id",to:'positions#show', as: :position

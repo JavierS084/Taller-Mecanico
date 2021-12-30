@@ -6,6 +6,7 @@
   <td><%=s.document %></td>
   <td> <%=s.phone %></td>
   <td><%=link_to"editar",obtener_client_path(s.id)%></td>
+  <td><%=link_to"eliminar",clientDestroy_url(s.id), method: :delete, data: {confirm: "Estas seguro de eliminar"}%></td>
 
 </tr>
 <% end %>

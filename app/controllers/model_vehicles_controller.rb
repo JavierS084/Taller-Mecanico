@@ -41,6 +41,7 @@ class ModelVehiclesController < ApplicationController
     @model_vehicle=ModelVehicle.find(params[:id])
   end
 
+  
   private
   def model_vehicle_parameter
     params.require(:model_vehicle).permit(:description, :brand_id)
