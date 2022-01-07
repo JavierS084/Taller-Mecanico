@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+  get "/", to:'workshops#index'
   get "/brand_list", to:'brands#index'
   get "/client_list", to:'clients#index'
   get "/colour_list", to:'colours#index'

@@ -22,6 +22,7 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
+ 
 
 .clearfix {
     *zoom: 1;
@@ -45,7 +46,10 @@
     background-color: transparent;
     border: 0;
 }
-
+.btn-nuevo{
+    background-color: #006dcc;
+    color: rgb(39, 131, 236);
+}
 .input-block-level {
     display: block;
     width: 100%;

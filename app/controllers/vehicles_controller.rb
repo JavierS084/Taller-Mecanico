@@ -6,7 +6,7 @@ class VehiclesController < ApplicationController
        @vehicle_list=Vehicle.joins(:client,:colour,:model_vehicle).where("clients.first_name like ? or
                                     model_vehicles.description like ?","%#{params['search']}%", "%#{params['search']}%")
      end
-     end
+  end
 
   def new
     @vehicle=Vehicle.new

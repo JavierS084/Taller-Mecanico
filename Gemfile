@@ -76,3 +76,5 @@ gem 'coffee-rails', '~> 4.2' # <-- This existed already
 gem 'coffee-script-source', '1.8.0' # <-- Adding this line solved the problem
 gem 'sass-rails'
 gem 'turbolinks'
+gem 'bootstrap'
+gem 'jquery-rails'

@@ -1,18 +1,20 @@
 
-<div>
-  <%= link_to "New Client", client_formulario_path %><br>
-</div>
 
 <div class="span4">
-  <div  id="search_client">
-    <%=form_tag(client_list_path , method: "get") do %>
-    <%=text_field_tag :search, params[:search] %>
-      <%=submit_tag "Buscar", :class=>'btn btn-primary' %>
-      <%end %>
-
+<div  id="search_client">
+<%=form_tag(client_list_path , method: "get") do %>
+  <%=text_field_tag :search, params[:search] %>
+  <%=submit_tag "Buscar", :class=>'btn btn-primary' %>
+  <%end %>
+  
   </div>
-
+  
   <h3> Lista de Clientes</h3>
+  <div class="btn btn-nuevo">
+  <%= link_to "Nuevo", client_formulario_path  %>
+  </div>
+    
+  
   <table  class="table table-bordered">
     <thead>
     <tr>
@@ -20,6 +22,7 @@
       <th>Apellido</th>
       <th>Cedula</th>
       <th>Telefono</th>
+      <th>Accion</th>
       <th>Accion</th>
 
     </tr>
