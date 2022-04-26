@@ -1,0 +1,38 @@
+li.nav-item{
+    padding-left: .3rem;
+   
+    
+}
+
+a {
+    color: #000000 !important;
+    text-decoration: auto !important;
+}
+.nav-link{
+    position: relative;
+
+    margin-bottom: .3rem;
+
+}
+ç
+.navbar {
+    color:aliceblue;
+    width: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+}
