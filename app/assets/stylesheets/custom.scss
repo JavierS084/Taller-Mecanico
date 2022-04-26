@@ -1,23 +1,41 @@
+li {
+    display: grid;
+    text-align: center;
+}
 li.nav-item{
-    padding-left: .3rem;
-   
-    
+    padding: .5 rem;
+    position: relative;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 a {
     color: #000000 !important;
     text-decoration: auto !important;
 }
-.nav-link{
-    position: relative;
-
-    margin-bottom: .3rem;
-
+li.a{
+    padding: .5rem
 }
-ç
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+   
+}
+.navbar-nav.nav-item {
+   position: relative;  
+   padding: .5rem;
+}
 .navbar {
-    color:aliceblue;
-    width: 100vh;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +44,6 @@ a {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
-
 .navbar-toggler {
     padding: 0.25rem 0.75rem;
     font-size: 1.25rem;
